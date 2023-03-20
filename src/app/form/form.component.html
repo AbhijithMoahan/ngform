@@ -1,1 +1,19 @@
-<p>form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+  <div>
+    <label for="surname">Surname:</label>
+    <input id="surname" type="text" formControlName="surname" />
+  </div>
+  <div>
+    <label for="jobPosition">Job position:</label>
+    <input id="jobPosition" type="text" formControlName="jobPosition" />
+  </div>
+  <div>
+    <label for="email">Email address:</label>
+    <input id="email" type="email" formControlName="email" />
+  </div>
+  <button type="submit" [ngClass]="{'button-hover': true}">Submit</button>
+</form>
