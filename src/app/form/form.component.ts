@@ -14,13 +14,13 @@ export class FormComponent {
       name: ['', Validators.required],
       surname: ['', Validators.required],
       jobPosition: [''],
-      email: ['', Validators.email]
+      email: ['',Validators.required]
     });
   }
 
   onSubmit() {
     if (this.form.invalid) {
-      window.alert('Please fill in the madadotory fields ');
+      window.alert('Please fill in the mandatory fields ');
       return;
     }
     console.log(this.form.value);
